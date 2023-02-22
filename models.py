@@ -17,3 +17,9 @@ class Employee(db.Model):
     def __repr__(self):
         return '<Employee {}>'.format(self.name)
 
+    def serialize(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'email': self.email
+        }
